@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成品欣賞</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    </style>
+
+</head>
+<body>
+    <!-- nav -->
+    <header class="w-100">
+        <div class="row align-items-center flex-wrap">
+            <div class="col-2">
+                <a href="./index.html">
+                    <img src="./logo/loge-1.png" class="logo">
+                </a>
+            </div>
+            <div class="col-7">
+                <ul id="headerList" class="header-list d-flex flex-wrap fs-4 pt-2">
+                    <li><a href="./關於我們.html">關於我們</a></li>
+                    <li><a href="./線上賞地.html">線上賞地</a></li>
+                    <li><a href="./成品欣賞.html">成品欣賞</a></li>
+                    <li><a href="./聯絡我們.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="myIcon col-3 d-flex">
+                <a href="https://www.facebook.com/groups/phpd07">
+                    <i class="fa-brands fa-facebook fs-4"></i>
+                </a>
+                <a href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <i class="fa-brands fa-line fs-4"></i>
+                </a>
+                <div id="Mlist">
+                    <i id="Mlist1"></i>
+                    <i id="Mlist2"></i>
+                    <i id="Mlist3"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- 標題 -->
+    <div class="title">
+        <h2>成品欣賞</h2>
+        <ol class="breadCrumb">
+            <li><a href="./index.html">首頁</a></li>
+            <li>成品欣賞</li>
+        </ol>
+    </div>
+
+    <!-- 內容 -->
+    <div class="container-md block">
+        <!-- 木屋 -->
+        <h3>木屋</h3>
+        <hr>
+        <div class="Card d-flex justify-content-evenly flex-wrap align-items-center pt-5">
+            <div onclick="myOpen('showImg1')" class="Card-item rounded-2">
+                <img src="./img/房子/木屋1/01.jpg" class="w-100 rounded-2">
+            </div>
+            <div onclick="myOpen('showImg2')" class="Card-item rounded-2">
+                <img src="./img/房子/木屋2/01.jpg" class="w-100 rounded-2">
+            </div>
+            <div onclick="myOpen('showImg3')" class="Card-item rounded-2">
+                <img src="./img/房子/木屋3/01.jpg" class="w-100 rounded-2">
+            </div>
+            <div onclick="myOpen('showImg4')" class="Card-item rounded-2">
+                <img src="./img/房子/木屋4/01.jpeg" class="w-100 rounded-2">
+            </div>
+        </div>
+        <!-- 移動木屋 -->
+        <div class="pt-5">
+            <h3>移動木屋</h3>
+            <hr>
+            <div class="Card d-flex justify-content-evenly flex-wrap align-items-center pt-5">
+                <div onclick="myOpen('showImg5')" class="Card-item rounded-2">
+                    <img src="./img/房子/移動方舟1/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg6')" class="Card-item rounded-2">
+                    <img src="./img/房子/移動方舟2/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg8')" class="Card-item rounded-2">
+                    <img src="./img/房子/移動木屋2/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg7')" class="Card-item rounded-2">
+                    <img src="./img/房子/移動木屋1/01.jpg" class="w-100 rounded-2">
+                </div>
+            </div>
+        </div>
+        <!-- 美式木屋 -->
+        <div class="pt-5">
+            <h3>美式木屋</h3>
+            <hr>
+            <div class="Card d-flex justify-content-evenly flex-wrap align-items-center pt-5">
+                <div onclick="myOpen('showImg9')" class="Card-item rounded-2">
+                    <img src="./img/房子/美式木屋1/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg10')" class="Card-item rounded-2">
+                    <img src="./img/房子/美式木屋2/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg11')" class="Card-item rounded-2">
+                    <img src="./img/房子/美式木屋3/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div class="Card-item rounded-2 invisible">
+                    <img src="./img/房子/美式木屋3/01.jpg" class="w-100 rounded-2">
+                </div>
+            </div>
+        </div>
+        <!-- 貨櫃屋 -->
+        <div class="pt-5">
+            <h3>貨櫃屋</h3>
+            <hr>
+            <div class="Card d-flex justify-content-evenly flex-wrap align-items-center pt-5">
+                <div onclick="myOpen('showImg12')" class="Card-item rounded-2">
+                    <img src="./img/房子/貨櫃屋2/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg14')" class="Card-item rounded-2">
+                    <img src="./img/房子/貨櫃屋4/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div onclick="myOpen('showImg13')" class="Card-item rounded-2">
+                    <img src="./img/房子/貨櫃屋3/01.jpg" class="w-100 rounded-2">
+                </div>
+                <div class="Card-item rounded-2 invisible">
+                    <img src="./img/房子/貨櫃屋4/01.jpg" class="w-100 rounded-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- 點擊的圖片 -->
+    <div id="showImg1" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg1')" class="fa-solid fa-xmark clos2 fs-4"></i>
+                <p onclick="change ('img1',img1, -1)" class="fs-1 pre">&lang;</p>
+                <img id="img1" src="./img/房子/木屋1/01.jpg" class="myImg">
+                <p onclick="change ('img1',img1, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg2" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg2')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img2',img2, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img2" src="./img/房子/木屋2/01.jpg" class="myImg">
+            <p onclick="change ('img2',img2, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg3" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg3')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img3',img3, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img3" src="./img/房子/木屋3/01.jpg" class="myImg">
+            <p onclick="change ('img3',img3, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg4" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg4')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img4',img4, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img4" src="./img/房子/木屋4/01.jpeg" class="myImg w-100">
+            <p onclick="change ('img4',img4, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg5" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg5')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img5',img5, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img5" src="./img/房子/移動方舟1/01.jpg" class="myImg w-100">
+            <p onclick="change ('img5',img5, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg6" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg6')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img6',img6, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img6" src="./img/房子/移動方舟2/01.jpg" class="myImg w-100">
+            <p onclick="change ('img6',img6, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg7" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg7')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img7',img7, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img7" src="./img/房子/移動木屋1/01.jpg" class="myImg w-100">
+            <p onclick="change ('img7',img7, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg8" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg8')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img8',img8, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img8" src="./img/房子/移動木屋2/01.jpg" class="myImg w-100">
+            <p onclick="change ('img8',img8, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg9" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg9')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img9',img9, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img9" src="./img/房子/美式木屋1/01.jpg" class="myImg w-100">
+            <p onclick="change ('img9',img9, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg10" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg10')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img10',img10, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img10" src="./img/房子/美式木屋2/01.jpg" class="myImg w-100">
+            <p onclick="change ('img10',img10, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg11" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg11')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img11',img11, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img11" src="./img/房子/美式木屋3/01.jpg" class="myImg w-100">
+            <p onclick="change ('img11',img11, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+    <div id="showImg12" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg12')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img12',img12, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img12" src="./img/房子/貨櫃屋2/01.jpg" class="myImg w-100">
+            <p onclick="change ('img12',img12, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+
+
+
+
+    <div id="showImg13" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg13')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img13', img13, -1)" class="fs-1 pre">&lang;</p>
+            <img id="img13" src="./img/房子/貨櫃屋3/01.jpg" class="myImg w-100">
+            <p onclick="change ('img13', img13, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+
+
+
+
+    <div id="showImg14" class="show-img">
+        <div class="show-img-contain">
+            <i onclick="myOff('showImg14')" class="fa-solid fa-xmark clos2 fs-4"></i>
+            <p onclick="change ('img14',img14 -1)" class="fs-1 pre">&lang;</p>
+            <img id="img14" src="./img/房子/貨櫃屋4/01.jpg" class="myImg w-100">
+            <p onclick="change ('img14',img14, 1)" class="fs-1 next">&rang;</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <div class=" footer w-100 bg-success position-relative">
+        <div class="d-flex justify-content-evenly">
+            <ul class="d-flex justify-content-center fs-4 w-40 text-center">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="./關於我們.html">關於我們</a></li>
+                <li><a href="./線上賞地.html">線上賞地</a></li>
+                <li><a href="./成品欣賞.html">成品欣賞</a></li>
+                <li><a href="./聯絡我們.html">聯絡我們</a></li>
+            </ul>
+            <div class="icon">
+                <a href="https://www.facebook.com/groups/phpd07">
+                    <i class="fa-brands fa-facebook fs-4"></i>
+                </a>
+                <a href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <i class="fa-brands fa-line fs-4"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copyright text-center pt-5">Copyright &copy 2024;此網站為練習用，不提供商業用途</div>
+        <div class="mon1 bg-success position-absolute"></div>
+        <div class="mon2 bg-success position-absolute"></div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/成品欣賞.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

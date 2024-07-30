@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上賞地</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    </style>
+
+</head>
+
+<body>
+    <!-- nav -->
+    <header class="w-100">
+        <div class="row align-items-center flex-wrap">
+            <div class="col-2">
+                <a href="./index.html">
+                    <img src="./logo/loge-1.png" class="logo">
+                </a>
+            </div>
+            <div class="col-7">
+                <ul id="headerList" class="header-list d-flex flex-wrap fs-4 pt-2">
+                    <li><a href="./關於我們.html">關於我們</a></li>
+                    <li><a href="./線上賞地.html">線上賞地</a></li>
+                    <li><a href="./成品欣賞.html">成品欣賞</a></li>
+                    <li><a href="./聯絡我們.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="myIcon col-3 d-flex">
+                <a href="https://www.facebook.com/groups/phpd07">
+                    <i class="fa-brands fa-facebook fs-4"></i>
+                </a>
+                <a
+                    href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <i class="fa-brands fa-line fs-4"></i>
+                </a>
+                <div id="Mlist">
+                    <i id="Mlist1"></i>
+                    <i id="Mlist2"></i>
+                    <i id="Mlist3"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="title">
+        <h2>線上賞地</h2>
+        <ol class="breadCrumb">
+            <li><a href="./index.html">首頁</a></li>
+            <li>線上賞地</li>
+        </ol>
+    </div>
+
+    <!-- 地圖 -->
+    <div class="container-md block-map">
+        <div class="row">
+            <div class="col-2">
+                <!-- 圖例 -->
+                <div class="caption">
+                    <p class="f-size"><span class="test-b">.....</span> : 公共區域</p>
+                    <p class="f-size"><span class="test-a">.....</span> : 待售土地</p>
+                    <p class="f-size"><span class="test-c">.....</span> : 已售土地</p>
+                    <p class="f-size"><span class="test-d">.....</span> : 道路</p>
+                    <p class="f-size"><span class="test-e">.....</span> : 水道</p>
+                </div>
+            </div>
+            <div class="col-10">
+                <svg id="svg" width="1000" height="700" viewBox="0 0 1200 800">>
+                    <!-- 路 -->
+                    <polygon class="road"
+                        points="864,362, 835,370, 822,368, 810,365, 782,333, 756,321, 736,327, 665,344, 627,338, 630,325, 666,331, 744,310, 753,309, 769,311, 788,325, 808,346, 816,355, 837,359, 859,350, 872,350, 868,365">
+                    </polygon>
+                    <polygon class="road"
+                        points="1038,723, 1031,710, 922,647, 907,641, 851,646, 766,651, 609,638, 569,634, 527,617, 513,598, 525,593, 531,602, 574,622, 706,633, 774,638, 851,633, 909,628, 948, 645, 1030,697, 1047,714">
+                    </polygon>
+                    <polygon class="road"
+                        points="513,598, 494,562, 484,524, 466,520, 461,503, 465,496, 466,480, 472,464, 484,449, 526,394, 550,369, 570,353, 590,344, 578,325, 606,310, 570,256, 564,226, 537,150, 520,128, 540,120, 550,136, 566,190, 578,247, 604,291, 630,325, 627,338, 574,362, 539,394, 503,444, 485,463, 480,473, 480,473, 480,473, 479,498, 486,512, 503,532, 503,550, 525,593">
+                    </polygon>
+                    <polygon class="road"
+                        points="484,524, 466,520, 453,527, 415,544, 362,553, 255,552, 224,549, 156,531, 125,521, 115,508, 136,512, 226,537, 252,537, 376,539, 432,525, 461,503">
+                    </polygon>
+                    <polygon class="road"
+                        points="226,537, 240,536, 239,496, 242,481, 290,436, 360,414, 358,428, 294,445, 254,485, 252,537">
+                    </polygon>
+                    <polygon class="road"
+                        points="115,508, 126,492, 168,425, 199,353, 197,343, 192,339, 191,324, 205,313, 251,305, 278,294, 308,267, 311,274, 282,301, 252,313, 202,327, 212,336, 314,356, 190,418, 137,498, 136,512">
+                    </polygon>
+
+                    <!-- 河 -->
+                    <polygon class="river"
+                        points="531,602, 525,593, 619,560, 653,545, 714,476, 729,471, 772,460, 788,461, 818,476, 887,505, 993,555, 990,564, 869,511, 772,468, 722,481, 652,554, 531,602">
+                    </polygon>
+
+                    <!-- 地 -->
+                    <polygon onmouseover="myOut('d7')" onmouseout="myIn('d7')" class="a"
+                        points="191,324, 181,303, 180,223, 280,186, 308,267, 278,294, 251,305, 205,313"></polygon>
+                    <text id="d7" x="215" y="265">D7</text>
+                    <polygon onmouseover="myOut('d6')" onmouseout="myIn('d6')" class="a"
+                        points="280,186, 277,66, 325,81, 390,96, 410,176"></polygon>
+                    <text id="d6" x="315" y="145">D6</text>
+                    <a onclick="opened('C3', 'C3b')">
+                        <polygon onmouseover="myOut('d5')" onmouseout="myIn('d5')" class="a"
+                            points="311,274, 280,186, 410,176, 405,200, 422,284, 402,277, 388,283"></polygon>
+                        <text id="d5" x="330" y="240">D5</text>
+                    </a>
+
+                    <polygon onmouseover="myOut('d3')" onmouseout="myIn('d3')" class="a"
+                        points="410,176, 390,96, 470,50, 489,47, 492,60, 516,107, 537,150"></polygon>
+                    <text id="d3" x="440" y="130">D3</text>
+                    <polygon onmouseover="myOut('d2')" onmouseout="myIn('d2')" class="a"
+                        points="416,253, 405,200, 410,176, 537,150, 564,223"></polygon>
+                    <text id="d2" x="455" y="210">D2</text>
+
+                    <polygon onmouseover="myOut('d1')" onmouseout="myIn('d1')" class="a"
+                        points="422,284, 416,253, 564,223, 570,256, 606,310, 578,325, 532,319"></polygon>
+                    <text id="d1" x="490" y="280">D1</text>
+
+                    <polygon onclick="opened('C4', 'C4b')" onmouseover="myOut('b8')" onmouseout="myIn('b8')" class="a"
+                        points="190,418, 214,356, 212,336, 202,327, 252,313, 282,301, 311,274, 379,283, 372,332, 216,392">
+                    </polygon>
+                    <text id="b8" x="265" y="340">B8</text>
+                    <polygon onmouseover="myOut('b7')" onmouseout="myIn('b7')" class="a"
+                        points="136,512, 137,498, 190,418, 216,392, 242,481, 239,496, 240,536, 226,537"></polygon>
+                    <text id="b7" x="180" y="485">B7</text>
+                    <polygon onmouseover="myOut('b6')" onmouseout="myIn('b6')" class="a"
+                        points="242,481, 216,392, 372,332, 360,414, 290,436"></polygon>
+                    <text id="b6" x="275" y="410">B6</text>
+                    <polygon class="c" id="b5" points="358,428, 379,283, 388,283, 402,277, 482,304, 430,403"></polygon>
+                    <polygon class="c" id="b13" points="139,658, 156,531, 224,549, 255,552, 254,679, 236,677, 164,651">
+                    </polygon>
+                    <polygon onmouseover="myOut('b10')" onmouseout="myIn('b10')" class="a"
+                        points="254,679, 255,552, 362,553, 371,629, 342,629, 322,639, 315,645, 298,668, 286,674">
+                    </polygon>
+                    <text id="b10" x="280" y="610">B10</text>
+                    <polygon onmouseover="myOut('b9')" onmouseout="myIn('b9')" class="a"
+                        points="371,629, 362,553, 415,544, 453,527, 466,520, 484,524, 494,562, 513,598, 447,621">
+                    </polygon>
+                    <text id="b9" x="410" y="590">B9</text>
+                    <polygon onmouseover="myOut('b2')" onmouseout="myIn('b2')" class="a"
+                        points="252,537, 254,485, 294,445, 358,428, 376,539"></polygon>
+                    <text id="b2" x="295" y="500">B2</text>
+                    <polygon onmouseover="myOut('b1')" onmouseout="myIn('b1')" class="a"
+                        points="376,539, 358,428, 430,404, 484,449, 466,480, 465,496, 461,503, 432,525"></polygon>
+                    <text id="b1" x="400" y="480">B1</text>
+                    <a onclick="opened('C2', 'C2b')">
+                        <polygon onmouseover="myOut('b3')" onmouseout="myIn('b3')" class="a"
+                            points="484,449, 430,404, 482,304, 532,319, 578,325, 590,344, 570,353, 550,369, 526,394">
+                        </polygon>
+                        <text id="b3" x="480" y="380">B3</text>
+                    </a>
+
+                    <polygon onmouseover="myOut('c5')" onmouseout="myIn('c5')" class="a"
+                        points="566,190, 550,136, 540,120, 615,54, 637,70, 684,158"></polygon>
+                    <text id="c5" x="580" y="140">C5</text>
+                    <polygon onmouseover="myOut('c6')" onmouseout="myIn('c6')" class="a"
+                        points="745,196, 732,198, 684,158, 637,70 674,82, 763,47 763,192"></polygon>
+                    <text id="c6" x="695" y="135">C6</text>
+                    <polygon onmouseover="myOut('rm')" onmouseout="myIn('rm')" class="b"
+                        points="604,291, 578,247, 566,190, 684,158, 732,198, 630,261, 630,275"></polygon>
+                    <text id="rm" x="590" y="220">交誼室</text>
+                    <polygon class="c" id="c1"
+                        points="630,325, 604,291, 630,275, 630,261, 732,198, 745,196, 744,310, 666,331"></polygon>
+                    <polygon class="c" id="c12" points="763,192, 763,47, 803,32, 847,56, 851,179"></polygon>
+                    <polygon onmouseover="myOut('c2')" onmouseout="myIn('c2')" class="a"
+                        points="744,310, 745,196, 763,192, 851,179, 808,346, 788,325, 769,311, 753,309"></polygon>
+                    <text id="c2" x="770" y="260">C2</text>
+                    <polygon onmouseover="myOut('c7')" onmouseout="myIn('c7')" class="a"
+                        points="847,56, 916,78, 922,144, 914,168, 851,179"></polygon>
+                    <text id="c7" x="857" y="132">C7</text>
+                    <polygon onmouseover="myOut('c3')" onmouseout="myIn('c3')" class="a"
+                        points="808,346, 851,179, 914,168, 872,350, 859,350, 837,359, 816,355"></polygon>
+                    <text id="c3" x="840" y="278">C3</text>
+                    <polygon onmouseover="myOut('a12')" onmouseout="myIn('a12')" class="a"
+                        points="479,498, 480,473, 485,463, 503,444, 539,394, 574,362, 627,338, 623,454, 611,461, 558,482, 530,477">
+                    </polygon>
+                    <text id="a12" x="550" y="435">A12</text>
+                    <polygon onmouseover="myOut('a11')" onmouseout="myIn('a11')" class="a"
+                        points="525,593, 503,550, 503,532, 486,512, 479,498, 530,477, 558,482, 611,461, 619,560">
+                    </polygon>
+                    <text id="a11" x="535" y="540">A11</text>
+                    <polygon onmouseover="myOut('a10')" onmouseout="myIn('a10')" class="a"
+                        points="623,454, 627,338, 665,344, 736,327, 732,397"></polygon>
+                    <text id="a10" x="653" y="395">A10</text>
+                    <polygon onmouseover="myOut('a9')" onmouseout="myIn('a9')" class="a"
+                        points="619,560, 611,461, 732,397, 729,471, 714,476, 653,545"></polygon>
+                    <text id="a9" x="640" y="490">A9</text>
+                    <polygon onmouseover="myOut('a8')" onmouseout="myIn('a8')" class="a"
+                        points="729,471, 736,327, 756,321, 782,333, 810,365, 822,368, 818,478, 788,461, 772,460">
+                    </polygon>
+                    <text id="a8" x="755" y="410">A8</text>
+                    <polygon onmouseover="myOut('a7')" onmouseout="myIn('a7')" class="a"
+                        points="818,478, 822,368, 835,370, 864,362, 944,401, 925,417, 887,505"></polygon>
+                    <text id="a7" x="840" y="435">A7</text>
+                    <polygon onmouseover="myOut('a6')" onmouseout="myIn('a6')" class="a"
+                        points="887,505, 925,417, 944,401, 999,411, 993,555"></polygon>
+                    <text id="a6" x="930" y="480">A6</text>
+                    <polygon onmouseover="myOut('a5')" onmouseout="myIn('a5')" class="a"
+                        points="706,633, 574,622, 531,602, 652,554, 722,482"></polygon>
+                    <text id="a5" x="635" y="600">A5</text>
+                    <polygon class="c" id="a4" points="851,633, 774,638, 706,633, 722,482, 772,468, 869,511"></polygon>
+
+                    <polygon onmouseover="myOut('a2')" onmouseout="myIn('a2')" class="a"
+                        points="948,645, 909,628, 851,633, 869,511, 993,566"></polygon>
+                    <text id="a2" x="895" y="595">A2</text>
+                    <a onclick="opened('C1' ,'C1b')">
+                        <polygon onmouseover="myOut('a1')" onmouseout="myIn('a1')" class="a"
+                            points="1047,714, 1030,697, 948,645, 993,566, 1098,622"></polygon>
+                        <text id="a1" x="1000" y="645">A1</text>
+                    </a>
+                </svg>
+            </div>
+        </div>
+    </div>
+        <!-- =======a1============= -->
+        <div id="C1b" class="show-img">
+            <div class="show-img-contain">
+                <div id="C1" class="c2-0">
+                    <div class="row block1 bg-dark rounded-2">
+                        <div onclick="closed('C1', 'C1b')">
+                            <i class="fa-solid fa-xmark clos"></i>
+                        </div>
+                        <div class="col-12 p-2 position-relative">
+                            <img id="img1_1" src="./img/地形照片/1-1.jpg" class="w-100">
+                            <img id="img1_2" src="./img/地形照片/1-2.jpg" class="hide w-100">
+                            <img id="img1_3" src="./img/地形照片/1-3.jpg" class="hide w-100">
+                            <p class="mySize">總坪數: 776坪</p>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change1()">
+                                <img src="./img/地形照片/1-1.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change2()">
+                                <img src="./img/地形照片/1-2.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change3()">
+                                <img src="./img/地形照片/1-3.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =======b3============= -->
+        <div id="C2b" class="show-img">
+            <div class="show-img-contain">
+                <div id="C2" class="c2-0">
+                    <div class="row block1 bg-dark rounded-2">
+                        <div onclick="closed('C2', 'C2b')">
+                            <i class="fa-solid fa-xmark clos"></i>
+                        </div>
+                        <div class="col-12 p-2 position-relative">
+                            <img id="img2_1" src="./img/地形照片/2-1.jpg" class="w-100">
+                            <img id="img2_2" src="./img/地形照片/2-2.jpg" class="hide w-100">
+                            <img id="img2_3" src="./img/地形照片/2-3.jpg" class="hide w-100">
+                            <p class="mySize">總坪數: 785坪</p>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change201()">
+                                <img src="./img/地形照片/2-1.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change202()">
+                                <img src="./img/地形照片/2-2.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change203()">
+                                <img src="./img/地形照片/2-3.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- =======d5============= -->
+        <div id="C3b" class="show-img">
+            <div class="show-img-contain">
+                <div id="C3" class="c2-0">
+                    <div class="row block1 bg-dark rounded-2">
+                        <div onclick="closed('C3', 'C3b')">
+                            <i class="fa-solid fa-xmark clos"></i>
+                        </div>
+                        <div class="col-12 p-2 position-relative">
+                            <img id="img6_1" src="./img/地形照片/6-1.jpg" class="w-100">
+                            <img id="img6_2" src="./img/地形照片/6-2.jpg" class="hide w-100">
+                            <img id="img6_3" src="./img/地形照片/6-3.jpg" class="hide w-100">
+                            <p class="mySize">總坪數: 790坪</p>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change601()">
+                                <img src="./img/地形照片/6-1.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change602()">
+                                <img src="./img/地形照片/6-2.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                        <div class="col-4 p-2">
+                            <a onclick="change603()">
+                                <img src="./img/地形照片/6-3.jpg" class="pointer w-100 rounded-1">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ============d1==================== -->
+        <div id="C4b" class="show-img">
+            <div class="show-img-contain">
+                <div id="C4" class="c2-4 bg-dark rounded-2">
+                    <div onclick="closed('C4', 'C4b')">
+                        <i class="fa-solid fa-xmark clos"></i>
+                    </div>
+                    <div class="img-container">
+                        <img id="myMainImg1" class="w-100" src="./img/地形照片/地形1/01.webp">
+                        <p class="mySize">總坪數: 872坪</p>
+                    </div>
+                    <div class="list-con">
+                        <button id="prevButton" class="button" disabled>&lang;</button>
+                        <div class="list-container bg-dark">
+                            <div id="list" class="list">
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[0])" src="./img/地形照片/地形1/01.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[1])" src="./img/地形照片/地形1/02.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[2])" src="./img/地形照片/地形1/03.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[3])" src="./img/地形照片/地形1/04.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[4])" src="./img/地形照片/地形1/05.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[5])" src="./img/地形照片/地形1/06.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[6])" src="./img/地形照片/地形1/07.webp">
+                                </div>
+                                <div class="list-item">
+                                    <img onclick="myChangeImg('myMainImg1', img40[7])" src="./img/地形照片/地形1/08.webp">
+                                </div>
+                            </div>
+                        </div>
+                        <button id="nextButton" class="button">&rang;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 馬上預約 -->
+        <div class="reserve">
+            <!-- <div id="reserveItem1">我要預約</div> -->
+            <div onclick="myExpand()" id="reserveItem1">我要預約</div>
+            <div id="reserveItem2">
+                <a href="tel:+886-9-123456789">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+            <div id="reserveItem3" onclick="jumpTo()">線上填表</div>
+            <div id="reserveItem4">
+                <a
+                    href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <i class="fa-brands fa-line fs-4"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- footer -->
+        <div class=" footer w-100 bg-success position-relative">
+            <div class="d-flex justify-content-evenly">
+                <ul class="d-flex justify-content-center fs-4 w-40 text-center">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="./關於我們.html">關於我們</a></li>
+                    <li><a href="./線上賞地.html">線上賞地</a></li>
+                    <li><a href="./成品欣賞.html">成品欣賞</a></li>
+                    <li><a href="./聯絡我們.html">聯絡我們</a></li>
+                </ul>
+                <div class="icon">
+                    <a href="https://www.facebook.com/groups/phpd07">
+                        <i class="fa-brands fa-facebook fs-4"></i>
+                    </a>
+                    <a
+                        href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                        <i class="fa-brands fa-line fs-4"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="copyright text-center pt-5">Copyright &copy 2024;此網站為練習用，不提供商業用途</div>
+            <div class="mon1 bg-success position-absolute"></div>
+            <div class="mon2 bg-success position-absolute"></div>
+        </div>
+
+
+
+
+
+
+        <script src="./js/main.js"></script>
+        <script src="./bootstrap/bootstrap.bundle.js"></script>
+</body>
+
+</html>

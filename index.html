@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    </style>
+
+</head>
+
+<body>
+    <!-- nav -->
+    <header class="w-100">
+        <div class="row align-items-around flex-wrap">
+            <div class="loge-container col-2 d-flex">
+                <a href="./index.html">
+                    <img src="./logo/loge-1.png" class="logo">
+                </a>
+            </div>
+            <div class="col-7">
+                <ul id="headerList" class="header-list d-flex flex-wrap fs-4 pt-2">
+                    <li><a href="./關於我們.html">關於我們</a></li>
+                    <li><a href="./線上賞地.html">線上賞地</a></li>
+                    <li><a href="./成品欣賞.html">成品欣賞</a></li>
+                    <li><a href="./聯絡我們.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="myIcon col-3 d-flex">
+                <a href="https://www.facebook.com/groups/phpd07">
+                    <i class="fa-brands fa-facebook fs-4"></i>
+                </a>
+                <a href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <i class="fa-brands fa-line fs-4"></i>
+                </a>
+                <div id="Mlist">
+                    <i id="Mlist1"></i>
+                    <i id="Mlist2"></i>
+                    <i id="Mlist3"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- 輪播圖 -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/banner01.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner02.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner03.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner04.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner05.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/banner07.jpg" class="d-block w-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container-md">
+        <!-- 規劃退休生活 -->
+        <div class="block-index position-relative">
+            <div>
+                <img src="./img/index-img/01.jpg" class="w-100">
+            </div>
+        </div>
+
+        <!-- 打造屬於自己的房子 -->
+        <div class="block-index d-flex justify-content-between flex-wrap">
+            <div class="block2-1 ">
+                <h1>打造自己的房子</h1>
+                <img src="./img/index-img/05.jpg" class="w-100 rounded-2">
+                <p class="text-center pt-5 fs-5">住了那麼長時間制式的房屋了<br>
+                    何不依造心目中的理想<br>
+                    打造屬於自己風格的小屋呢
+                </p>
+            </div>
+            <div class="block2-2">
+                <img src="./img/index-img/04.jpg" class="w-100 rounded-2">
+            </div>
+        </div>
+
+        <!-- 當個城市農夫 -->
+        <div class="block-index position-relative d-flex justify-content-between flex-wrap">
+            <h1 class="text3-1">當個城市農夫</h1>
+            <div class="block3-1">
+                <img src="./img/index-img/02.jpg" class="w-75 rounded-2">
+            </div>
+            <p class="text3-2 fs-5">健康意識抬頭<br>
+                回歸最根本的方法 - 自耕自食<br>
+                體驗過程的樂趣<br>
+                享受自己的成果
+            </p>
+            <div class="block3-2">
+                <img src="./img/index-img/06.jpg" class="w-75 rounded-2">
+            </div>
+            <br>
+        </div>
+
+        <!-- 家人朋友聚會的好地方 -->
+        <div class="block-index">
+            <div class="p-4 block4-1 d-flex justify-content-between flex-wrap">
+                <h1>和家人 朋友相聚</h1>
+                <div class="block4-1-img">
+                    <img src="./img/index-img/07.jpg" class="w-100 rounded-2">
+                </div>
+            </div>
+            <div class="p-4 block4-2 d-flex flex-wrap">
+                <div class="block4-2-img">
+                    <img src="./img/index-img/08.jpg" class="w-100 rounded-2">
+                </div>
+                <p class="fs-5">在繁忙的生活中<br>
+                    多久沒有和家人 朋友好好聚會了<br>
+                    為何不到沒有車水馬龍的山區<br>
+                    增進彼此的感情呢
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class=" footer w-100 bg-success position-relative">
+        <div class="d-flex justify-content-evenly">
+            <ul class="d-flex justify-content-center fs-4 w-40 text-center">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="./關於我們.html">關於我們</a></li>
+                <li><a href="./線上賞地.html">線上賞地</a></li>
+                <li><a href="./成品欣賞.html">成品欣賞</a></li>
+                <li><a href="./聯絡我們.html">聯絡我們</a></li>
+            </ul>
+            <div class="icon">
+                <a href="https://www.facebook.com/groups/phpd07">
+                    <i class="fa-brands fa-facebook fs-4"></i>
+                </a>
+                <a href="https://line.me/ti/g2/gqNUHmNTF9mK-WS8Scur-y9gAj6WqtBKntv1xg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
+                    <i class="fa-brands fa-line fs-4"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copyright text-center pt-5">Copyright &copy 2024;此網站為練習用，不提供商業用途</div>
+        <div class="mon1 bg-success position-absolute"></div>
+        <div class="mon2 bg-success position-absolute"></div>
+    </div>
+
+
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+</body>
+
+</html>
