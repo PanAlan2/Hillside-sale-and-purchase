@@ -194,7 +194,7 @@ function myExpand() {
 }
 // );
 function jumpTo() {
-    window.location.href = './聯絡我們.html#myForm';
+    window.location.href = './contactus.html#myForm';
 }
 
 
